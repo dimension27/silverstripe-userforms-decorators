@@ -25,6 +25,11 @@ class UserFormsDecorator {
 		}
 	}
 
+	public static function add_button_class( $class ) {
+		DataObject::add_extension('UserDefinedForm_Controller', 'AddButtonClassDecorator');
+		AddButtonClassDecorator::setButtonClass($class);
+	}
+
 }
 
 ?>
